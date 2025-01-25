@@ -1,0 +1,51 @@
+﻿<Window x:Class="RobotWars.RobotWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RobotWars"
+        mc:Ignorable="d"
+        Title="Robot" Height="230" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Name" VerticalAlignment="Center" />
+        <TextBox Name="tbName" Grid.Row="0" Grid.Column="1" TextAlignment="Left" TextChanged="tbName_TextChanged" Text="" Height="25" Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Label Grid.Row="1" Grid.Column="0" Content="Color" VerticalAlignment="Center" />
+        <Button Name="btnColor" Grid.Row="1" Grid.Column="1" Content="Color" Height="20" Width="75" Margin="5" VerticalAlignment="Center" Click="btnColor_Click" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Faction" VerticalAlignment="Center" />
+        <ComboBox Name="cbFaction" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="2" />
+        <Label Grid.Row="3" Grid.Column="0" Content="Position" VerticalAlignment="Center" />
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" >
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="X" VerticalAlignment="Center" Height="25" />
+                <TextBox Name="tbX" Grid.Row="0" Grid.Column="1" TextAlignment="Right" TextChanged="tb_TextChanged" Text="0" Height="20" Width="50" Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Grid.Column="2" Content="Y" VerticalAlignment="Center" Height="25" />
+                <TextBox Name="tbY" Grid.Row="0" Grid.Column="3" TextAlignment="Right" TextChanged="tb_TextChanged" Text="0" Height="20" Width="50" Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+            </Grid>
+        </StackPanel>
+        <Label Grid.Row="4" Grid.Column="0" Content="Direction" VerticalAlignment="Center" />
+        <ComboBox Name="cbDirection" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="2" />
+        <Button Name="btnOK" Content="OK" Grid.Row="5" Grid.Column="0" Height="25" Width="75" Margin="5" VerticalAlignment="Center" IsDefault="True" Click="btnOK_Click" />
+        <Button Name="btnCancel" Content="Cancel" Grid.Row="5" Grid.Column="2" Height="25" Width="75" VerticalAlignment="Center" IsCancel="True" Click="btnCancel_Click" />
+    </Grid>
+</Window>
