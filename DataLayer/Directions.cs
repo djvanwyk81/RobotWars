@@ -10,20 +10,20 @@ namespace DataLayer
     public enum Directions
     {
         [Description("North")]
-        N = 0,
+        North = 0,
         [Description("East")]
-        E = 1,
+        East = 1,
         [Description("South")]
-        S = 2,
+        South = 2,
         [Description("West")]
-        W = 3
+        West = 3
     }
 
     public enum TurnDirections
     {
         [Description("Left")]
-        L,
+        Left,
         [Description("Right")]
-        R,
+        Right,
     }
 }

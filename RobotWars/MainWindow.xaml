@@ -21,7 +21,7 @@
             <DockPanel Name="dpArena" LastChildFill="False" >
                 <TextBlock Name="tbWelcome" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,2" FontSize="16" >Welcome to another exciting edition of RobotWars</TextBlock>
                 <!--<Label Name="lbArena" VerticalAlignment="Center" Margin="5,2" FontSize="18" FontWeight="Bold" Visibility="Collapsed" Content="" />-->
-                <Label Name="tbRobots" VerticalAlignment="Center" Margin="5,2" DockPanel.Dock="Right" Visibility="Collapsed" Content="0 robots remaining" />
+                <Label Name="lbRobots" VerticalAlignment="Center" Margin="5,-4" DockPanel.Dock="Right" Visibility="Collapsed" Content="0 robots remaining" />
             </DockPanel>
         </Border>
         <StackPanel Name="spControls" Grid.Row="1" Grid.Column="0" >
@@ -41,11 +41,14 @@
                 <Button Name="btnExecute" Content="Execute" Height="20" Width="80" Margin="5" VerticalAlignment="Center" Click="btnExecute_Click" DockPanel.Dock="Right" />
             </DockPanel>            
             <TextBox Name="tbAutomation" Grid.Row="1" TextWrapping="WrapWithOverflow" AcceptsReturn="True" />
-            <Label Content="Log" Grid.Row="2" />
+            <DockPanel Grid.Row="2" LastChildFill="False" >
+                <Label Content="Log" VerticalAlignment="Center" Height="30" />
+                <CheckBox Name="cbDebug" Content="Enable Debug Logs" IsChecked="False" Height="15" VerticalAlignment="Center" DockPanel.Dock="Right" Margin="5,0" />
+            </DockPanel>
             <ListBox Name="lbLog" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <ListBox.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Name="miClear" Click="miClear_Click" />
+                    <MenuItem Name="miClear" Header="Clear log" Click="miClear_Click" />
                 </ContextMenu>
             </ListBox.ContextMenu>
         </ListBox>

@@ -26,10 +26,10 @@ namespace DataLayer
             {
                 switch (this.Direction)
                 {
-                    case Directions.N: return "↑";
-                    case Directions.E: return "→";
-                    case Directions.S: return "↓";
-                    case Directions.W: return "←";
+                    case Directions.North: return "↑";
+                    case Directions.East: return "→";
+                    case Directions.South: return "↓";
+                    case Directions.West: return "←";
                     default: throw new NotImplementedException();
                 } // switch
             }
@@ -51,10 +51,10 @@ namespace DataLayer
         {
             switch (this.Direction)
             {
-                case Directions.N: this.Direction = (turnDirection == TurnDirections.L ? Directions.W : Directions.E); break;
-                case Directions.E: this.Direction = (turnDirection == TurnDirections.L ? Directions.N : Directions.S); break;
-                case Directions.S: this.Direction = (turnDirection == TurnDirections.L ? Directions.E : Directions.W); break;
-                case Directions.W: this.Direction = (turnDirection == TurnDirections.L ? Directions.S : Directions.N); break;
+                case Directions.North: this.Direction = (turnDirection == TurnDirections.Left ? Directions.West : Directions.East); break;
+                case Directions.East: this.Direction = (turnDirection == TurnDirections.Left ? Directions.North : Directions.South); break;
+                case Directions.South: this.Direction = (turnDirection == TurnDirections.Left ? Directions.East : Directions.West); break;
+                case Directions.West: this.Direction = (turnDirection == TurnDirections.Left ? Directions.South : Directions.North); break;
                 default: throw new NotImplementedException();
             } // switch
         }
@@ -70,10 +70,10 @@ namespace DataLayer
 
             switch (this.Direction)
             {
-                case Directions.N: ++newPosition.Y; break;
-                case Directions.E: --newPosition.X; break;
-                case Directions.S: --newPosition.Y; break;
-                case Directions.W: ++newPosition.X; break;
+                case Directions.North: ++newPosition.Y; break;
+                case Directions.East: ++newPosition.X; break;
+                case Directions.South: --newPosition.Y; break;
+                case Directions.West: --newPosition.X; break;
                 default: throw new NotImplementedException();
             } // switch
 

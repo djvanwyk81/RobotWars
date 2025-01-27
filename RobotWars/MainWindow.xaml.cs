@@ -132,10 +132,10 @@ MMRMMRMRRM";
                     }
                     switch (asDirection)
                     {
-                        case "N": aDirection = Directions.N; break;
-                        case "E": aDirection = Directions.E; break;
-                        case "S": aDirection = Directions.S; break;
-                        case "W": aDirection = Directions.W; break;
+                        case "N": aDirection = Directions.North; break;
+                        case "E": aDirection = Directions.East; break;
+                        case "S": aDirection = Directions.South; break;
+                        case "W": aDirection = Directions.West; break;
                         default: this.WriteLog($"'{asDirection}' is not a valid direction"); return;
                     } // switch
 
@@ -149,12 +149,14 @@ MMRMMRMRRM";
                 {
                     switch (command)
                     {
-                        case 'L': _LastRobot.Turn(TurnDirections.L); break;
-                        case 'R': _LastRobot.Turn(TurnDirections.R);  break;
+                        case 'L': _LastRobot.Turn(TurnDirections.Left); break;
+                        case 'R': _LastRobot.Turn(TurnDirections.Right);  break;
                         case 'M': _LastRobot.Move(ref _Arena); break;
                         default: this.WriteLog($"'{command}' is not a valid command"); return;
                     } // switch
-                    WriteLog($"{_LastRobot.Position.X} {_LastRobot.Position.Y} {_LastRobot.Direction}");
+
+                    if (cbDebug.IsChecked.Value)
+                    WriteLog($"{command} -> {_LastRobot.Position.X} {_LastRobot.Position.Y} {_LastRobot.Direction}");
                 } // foreach command
                 WriteLog($"{_LastRobot.Position.X} {_LastRobot.Position.Y} {_LastRobot.Direction}");
                 #endregion
@@ -224,6 +226,8 @@ MMRMMRMRRM";
             _RobotButtons.Add(_Arena.Robots[robotName], newButton);
             grdArena.Children.Add(newButton);
             _LastRobot = _Arena.Robots[robotName];
+            lbRobots.Visibility = Visibility.Visible;
+            lbRobots.Content = $"{_Arena.Robots.Count} robots remaining";
         }
 
         private System.Drawing.Color RandomizeColor(int seed)

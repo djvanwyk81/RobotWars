@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWars", "RobotWars\RobotWars.csproj", "{8EF7F22E-6258-4089-863D-CA28D66D0D45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{7001F80B-02EC-4F1F-9443-35FBA3B38C04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWars.Test", "RobotWars.Test\RobotWars.Test.csproj", "{7D35D978-F826-49C4-86FB-FA02D46076B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7001F80B-02EC-4F1F-9443-35FBA3B38C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7001F80B-02EC-4F1F-9443-35FBA3B38C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7001F80B-02EC-4F1F-9443-35FBA3B38C04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D35D978-F826-49C4-86FB-FA02D46076B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D35D978-F826-49C4-86FB-FA02D46076B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D35D978-F826-49C4-86FB-FA02D46076B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D35D978-F826-49C4-86FB-FA02D46076B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
